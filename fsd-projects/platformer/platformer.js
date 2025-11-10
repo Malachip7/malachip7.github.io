@@ -42,15 +42,22 @@ $(function () {
 
 
 
-
-
-
     // TODO 3 - Create Collectables
 
+    createCollectable("database", 200, 565, 0.5, 0.7);  // red platform
+    createCollectable("database", 550, 515, 0.5, 0.7);  // orange platform
+    createCollectable("database", 900, 465, 0.5, 0.7);  // yellow platform
+    createCollectable("database", 1200, 415, 0.5, 0.7);  // green platform
+    createCollectable("database", 900, 315, 0.5, 0.7);  // blue platform
+    createCollectable("database", 550, 240, 0.5, 0.7);  // purple platform
+    createCollectable("database", 200, 165, 0.5, 0.7);  // pink platform
 
 
-    
     // TODO 4 - Create Cannons
+
+    createCannon("top", 1200, 1000);
+    createCannon("left", 10, 2000);
+    createCannon("bottom", 1300, 100);
 
 
     
