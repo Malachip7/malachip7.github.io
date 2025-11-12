@@ -5,6 +5,13 @@
     <title>Bouncing Box</title>
     <script src="jquery.min.js"></script>
     <style>
+
+      body
+      {
+        background-image: url("https://lumiere-a.akamaihd.net/v1/images/bluey_s3_iconic_landscape_clean_1_3c2da833.jpeg?region=0%2C0%2C2000%2C1125");
+        background-color: #d33b2e;
+      }
+
       .box {
         width: 70px;
         height: 70px;
@@ -70,7 +77,11 @@
 
         // TODO 2 - Variable declarations
 
+        var positionX = 0;
 
+        var points = 0;
+
+        var speed = 10;
 
 
 
@@ -81,8 +92,25 @@
          */
         function update() {
 
-        
+          // check to see if box is PAST the RIGHT side of screen 
+          if (positionX > boardWidth) 
+          {
+            // Code to reverse direction goes here
+            speed = speed * -1;
+          }
+          // check to see if box is PAST the LEFT side of screen 
+          else if (positionX < 0) 
+          {
+            // Code to reverse direction goes here
+            speed = speed * -1;
+          }
 
+
+          positionX = positionX + speed;
+
+          moveBoxTo( positionX ); // Moves box to x-position 
+
+          
           
         }
 
@@ -94,6 +122,16 @@
          * - move the box to the left side of the screen.
          */
         function handleBoxClick() {
+
+          positionX = 0;
+
+          points = points + 1;
+
+          // speed = speed + 3;  // with this speed change, the box shimmers 
+
+          speed = 3 * points + 10;
+
+          changeBoxText(points);   
 
 
 
