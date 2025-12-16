@@ -1,9 +1,15 @@
 body {
+  //background-image: url("/project-instructions/img/Heeler\ Family.jpeg");
   margin: 0px;
 }
 
 canvas {
   background-color: lightblue;
+
+  background-image: url("/project-instructions/img/SpongeBob.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
   margin: 20px;
 }
 
